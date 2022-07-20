@@ -8,27 +8,29 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class ListViewModel:ViewModel() {
-    var _shoe_name= MutableLiveData<String>()
-    var _company_name= MutableLiveData<String>()
-    var _size= MutableLiveData<String>()
-    var discription= MutableLiveData<String>()
+//    var _shoe_name= MutableLiveData<String>()
+//    var _company_name= MutableLiveData<String>()
+//    var _size= MutableLiveData<String>()
+//    var _discription= MutableLiveData<String>()
 
+    var shoe= Shoe("","","","")
 
-    var list = mutableListOf<Shoe>()
+    var list = MutableLiveData<MutableList<Shoe>>()
 //    private var _is_done=MutableLiveData<Boolean>()
 //    val is_done :LiveData<Boolean> get() = _is_done
+    init {
+        list.value= mutableListOf()
+    }
 
     fun setshoe(){
-        var shoe:Shoe= Shoe(_shoe_name.value.toString(),_company_name.value.toString(),_size.value.toString(),discription.value.toString())
-        list.add(shoe)
-        reset()
+        list.value!!.add(shoe)
+        shoe= Shoe("","","","")
     }
-
-    private fun reset()
-    {
-        _shoe_name.value=""
-        _company_name.value=""
-        _size.value=""
-        discription.value=""
-    }
+//    private fun reset()
+//    {
+//        shoe.value?.name=""
+//        shoe.value?.company=""
+//        shoe.value?.size =""
+//        shoe.value?.description =""
+//    }
 }

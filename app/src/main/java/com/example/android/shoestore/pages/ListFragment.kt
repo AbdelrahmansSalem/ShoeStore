@@ -41,7 +41,7 @@ lateinit var viewModel: ListViewModel
 
         viewModel=ViewModelProvider(requireActivity()).get(ListViewModel::class.java)
 
-        viewModel._shoe_name.observe(viewLifecycleOwner, Observer {name->
+        viewModel.list.observe(viewLifecycleOwner, Observer {name->
             addview()
         })
         binding.addItem.setOnClickListener(View.OnClickListener {
@@ -70,7 +70,7 @@ lateinit var viewModel: ListViewModel
     }
 
     fun addview(){
-        for (x in viewModel.list) {
+        for (x in viewModel.list.value!!) {
             var text = TextView(context)
             text.text = x.name
             text.textSize= 20F

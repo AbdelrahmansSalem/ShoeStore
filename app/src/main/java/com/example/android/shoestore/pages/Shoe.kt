@@ -1,4 +1,9 @@
 package com.example.android.shoestore.pages
 
-data class Shoe(var name: String, var company: String, var size: String, var description: String,
-                val images: List<String> = mutableListOf())
+data class Shoe(
+    var name: String,
+    var company:String,
+    var size: String,
+    var description: String,
+
+)
