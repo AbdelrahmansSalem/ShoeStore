@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Shoe Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="sgin_up">Sign Up</string>
+    <string name="welcome_message">Welcome to our shoe store application
+        We Wish good time to you  </string>
+    <string name="ready">So Are You Ready</string>
+    <string name="go">Let\'s Go</string>
+    <string name="instructions">In the next page, there is a your list of shoes and you can add new item by
+    clicking on add add item button</string>
+    <string name="myList">My List</string>
+    <string name="additem">Add Item</string>
+    <string name="newItem">Shoe Details</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="company">Company Name</string>
+    <string name="size">Size</string>
+    <string name="description">Description</string>
+    <string name="logout">Log out</string>
+</resources>
